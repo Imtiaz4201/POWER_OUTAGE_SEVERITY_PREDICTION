@@ -1,0 +1,23 @@
+model,PR_AUC_tuned,PR_AUC_tuned_std,PR_AUC_default,PR_AUC_gain,best_params,scenario,run,task
+ensemble,0.6904416130448829,0.08976986745095873,0.6736612115970219,0.016780401447861082,"{'rf': {'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 3, 'n_estimators': 300}, 'lgbm': {'learning_rate': 0.03, 'min_child_samples': 20, 'n_estimators': 100, 'num_leaves': 7}, 'et': {'max_depth': 10, 'max_features': 0.33, 'min_samples_leaf': 1, 'n_estimators': 300}}",A_pre_event,B_R0_proposal,is_severe
+ensemble,0.6853673794024373,0.09060143379276973,0.6727851155776594,0.012582263824777895,"{'rf': {'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 3, 'n_estimators': 300}, 'lgbm': {'learning_rate': 0.03, 'min_child_samples': 20, 'n_estimators': 100, 'num_leaves': 7}, 'et': {'max_depth': None, 'max_features': 'sqrt', 'min_samples_leaf': 3, 'n_estimators': 300}}",A_pre_event,B_R1_overlap,is_severe
+logistic,0.6969107216263575,0.09156180412568077,0.6787069107450487,0.018203810881308735,{'C': 0.1},A_pre_event,B_R2_strict,is_severe
+logistic,0.6931570299777852,0.08926864595541396,0.6686114467805486,0.024545583197236542,{'C': 0.1},A_pre_event,B_R3_completed,is_severe
+ensemble,0.6874730012357624,0.0835119491949033,0.6772008806413746,0.010272120594387757,"{'rf': {'max_depth': None, 'max_features': 0.33, 'min_samples_leaf': 10, 'n_estimators': 300}, 'lgbm': {'learning_rate': 0.03, 'min_child_samples': 20, 'n_estimators': 100, 'num_leaves': 7}, 'et': {'max_depth': None, 'max_features': 'sqrt', 'min_samples_leaf': 10, 'n_estimators': 300}}",A_pre_event,P_R0_proposal,is_severe
+ensemble,0.6833996148460706,0.0942920311705954,0.6776185827492803,0.005781032096790262,"{'rf': {'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 10, 'n_estimators': 300}, 'lgbm': {'learning_rate': 0.03, 'min_child_samples': 20, 'n_estimators': 100, 'num_leaves': 7}, 'et': {'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 3, 'n_estimators': 300}}",A_pre_event,P_R1_overlap,is_severe
+logistic,0.6885937390193128,0.09921425465131993,0.6744786703998326,0.014115068619480198,{'C': 0.1},A_pre_event,P_R2_strict,is_severe
+logistic,0.6881665093073719,0.09381918409773964,0.668480700969205,0.01968580833816691,{'C': 0.1},A_pre_event,P_R3_completed,is_severe
+logistic,0.6740919338012681,0.08018643120985086,0.6740919338012681,0.0,{'C': 1},A_pre_event,REF_noaa_only,is_severe
+logistic,0.6996559465606179,0.08850416077811855,0.6830142952808544,0.01664165127976347,{'C': 0.1},A_pre_event,REF_nws_only,is_severe
+logistic,0.6507549799453276,0.11658446400850715,0.6410622613443027,0.009692718601024941,{'C': 0.1},A_pre_event,REF_no_weather,is_severe
+et,0.7155561657242486,0.1115064560280406,0.7016489025105845,0.01390726321366409,"{'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'n_estimators': 300}",B_with_cause,B_R0_proposal,is_severe
+et,0.7079172645464185,0.10996314800135173,0.697081314431828,0.010835950114590487,"{'max_depth': None, 'max_features': 'sqrt', 'min_samples_leaf': 3, 'n_estimators': 300}",B_with_cause,B_R1_overlap,is_severe
+ensemble,0.7008405869564095,0.11074950515692274,0.6993920331183581,0.0014485538380514251,"{'rf': {'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 3, 'n_estimators': 300}, 'lgbm': {'learning_rate': 0.1, 'min_child_samples': 20, 'n_estimators': 100, 'num_leaves': 31}, 'et': {'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 10, 'n_estimators': 300}}",B_with_cause,B_R2_strict,is_severe
+logistic,0.7316781352649342,0.08407974673412824,0.7054757744073429,0.02620236085759131,{'C': 0.1},B_with_cause,B_R3_completed,is_severe
+logistic,0.7193150737768252,0.10462296843036538,0.7051675266374999,0.014147547139325312,{'C': 0.1},B_with_cause,P_R0_proposal,is_severe
+logistic,0.7166740691033875,0.10561647906198857,0.6967175407210433,0.019956528382344185,{'C': 0.1},B_with_cause,P_R1_overlap,is_severe
+logistic,0.7163621200958524,0.10054690890065501,0.6973793718355451,0.018982748260307325,{'C': 0.1},B_with_cause,P_R2_strict,is_severe
+logistic,0.7201356930993394,0.09610104521349552,0.700967066271209,0.019168626828130475,{'C': 0.1},B_with_cause,P_R3_completed,is_severe
+logistic,0.7112045032442136,0.10017750231583081,0.7097987645266257,0.0014057387175878677,{'C': 0.1},B_with_cause,REF_noaa_only,is_severe
+logistic,0.73088869386897,0.08461615020917646,0.7115522346455788,0.019336459223391222,{'C': 0.1},B_with_cause,REF_nws_only,is_severe
+logistic,0.7094910370084786,0.0982812341333168,0.7094910370084786,0.0,{'C': 1},B_with_cause,REF_no_weather,is_severe

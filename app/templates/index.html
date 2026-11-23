@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Outage Severity Predictor</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1>Outage Severity Predictor</h1>
+    <p>Early estimate of a major power outage at the moment it starts: customers affected, duration and the chance it becomes severe.</p>
+  </div>
+</header>
+
+<main class="wrap grid">
+  <form method="post" class="card" id="form" novalidate>
+    <h2>Outage details</h2>
+    {% if error %}<div class="error">{{ error }}</div>{% endif %}
+
+    <div class="row two">
+      <label>State
+        <select name="state" id="state" required>
+          <option value="">Choose a state</option>
+          {% for code, name in states %}
+          <option value="{{ code }}" {% if form.get('state', '').upper() == code %}selected{% endif %}>{{ name }}</option>
+          {% endfor %}
+        </select>
+      </label>
+      <label>Outage start
+        <input type="datetime-local" name="start" value="{{ form.get('start', '') }}" required>
+      </label>
+    </div>
+
+    <h3>Top 5 features <span class="muted">(pre-filled with typical values for the state; change them to the current situation)</span></h3>
+    {% for key, spec in inputs.items() %}
+    <label class="field">
+      <span>{{ spec.label }} <em>{{ spec.unit }}</em></span>
+      <input type="number" min="0" step="{{ spec.step }}" name="{{ key }}" id="{{ key }}" value="{{ form.get(key, '') }}" required>
+      <small>{{ spec.help }}</small>
+    </label>
+    {% endfor %}
+
+    <label class="field">
+      <span>Decision rule for "severe" <em>cost of a missed severe outage : false alarm</em></span>
+      <select name="cost_ratio">
+        {% for c, text in cost_ratios %}
+        <option value="{{ c }}" {% if form.get('cost_ratio', '1')|string == c|string %}selected{% endif %}>{{ text }}</option>
+        {% endfor %}
+      </select>
+    </label>
+
+    <details class="explain">
+      <summary>What does the cost ratio mean?</summary>
+      <p>The model gives a <b>chance</b> (%) that the outage becomes severe. To turn that chance into a
+        <b>yes / no answer</b>, the app needs a cut-off. The cut-off depends on which mistake is worse:</p>
+      <ul>
+        <li><b>Missed severe outage:</b> the app says "Not severe" but the outage becomes severe, so too few crews are sent.</li>
+        <li><b>False alarm:</b> the app says "Severe" but the outage stays small, so crews are called for nothing.</li>
+      </ul>
+      <p><b>3 : 1</b> means one missed severe outage costs as much as <b>3 false alarms</b>.
+        The more a miss costs, the lower the cut-off, so the app raises the alarm earlier.</p>
+      <table>
+        <tr><th>Cost ratio</th><th>Meaning</th><th>Says "Severe" when the chance is</th></tr>
+        <tr><td>1 : 1</td><td>a miss is as bad as a false alarm</td><td>50% or more</td></tr>
+        <tr><td>3 : 1</td><td>a miss is 3 times worse</td><td>25% or more</td></tr>
+        <tr><td>5 : 1</td><td>a miss is 5 times worse</td><td>17% or more</td></tr>
+      </table>
+      <p><b>Why 25% for 3 : 1?</b> Take an outage with a 25% chance of being severe:</p>
+      <ul>
+        <li>If the app says "Not severe": 25% chance it was a miss × cost 3 = <b>0.75</b></li>
+        <li>If the app says "Severe": 75% chance it was a false alarm × cost 1 = <b>0.75</b></li>
+      </ul>
+      <p>Both choices cost the same, so 25% is the break-even point. Above it, saying "Severe" is cheaper.
+        In general the cut-off is <b>1 / (1 + c)</b>, where <b>c</b> is how many false alarms one miss is worth.</p>
+      <p class="muted">The cost ratio changes only the yes / no answer. The chance (%) itself stays the same.
+        The utility chooses c from its own costs, for example $50,000 for a missed severe outage and
+        $10,000 for a false alarm gives c = 5.</p>
+    </details>
+
+    <div class="buttons">
+      <button type="submit">Predict</button>
+      <button type="button" class="secondary" id="reset">Reset to typical values</button>
+    </div>
+    <p class="muted small">The other {{ n_features - 5 }} model features are filled automatically: time features from the start time,
+      and typical values of recent outages ({{ default_years[0] }}–{{ default_years[1] }}) in the same state with the same storm status.</p>
+  </form>
+
+  <section class="card result">
+    <h2>Prediction</h2>
+    {% if result %}
+      <p class="muted">{{ result.state }} · {{ result.start }} · {{ result.storm_status }}</p>
+      <div class="kpi">
+        <div class="label">Customers affected</div>
+        <div class="value">≈ {{ "{:,}".format(result.customers) }}</div>
+        <div class="muted small">{{ result.customers_per_100k }} per 100,000 residents</div>
+      </div>
+      <div class="kpi">
+        <div class="label">Outage duration</div>
+        <div class="value">≈ {{ result.duration_text }}</div>
+        <div class="muted small">{{ "{:,}".format(result.duration_minutes) }} minutes</div>
+      </div>
+      <div class="kpi">
+        <div class="label">Chance of a severe outage</div>
+        <div class="value">{{ (result.severe_probability * 100)|round(0)|int }}%
+          <span class="badge {{ 'bad' if result.severe else 'good' }}">{{ result.severe_label }}</span></div>
+        <div class="bar"><div style="width: {{ (result.severe_probability * 100)|round(1) }}%"></div>
+          <i style="left: {{ (result.threshold * 100)|round(1) }}%"></i></div>
+        {% set pct = (result.severe_probability * 100)|round(0)|int %}
+        {% set cut = (result.threshold * 100)|round(0)|int %}
+        <div class="reason">
+          With cost ratio {{ result.cost_ratio|int }} : 1, a missed severe outage counts as {{ result.cost_ratio|int }} false alarm{{ 's' if result.cost_ratio != 1 }},
+          so the app says "Severe" when the chance is {{ cut }}% or more.<br>
+          This outage: {{ pct }}% is {{ 'at or above' if result.severe else 'below' }} {{ cut }}% → <b>{{ result.severe_label }}</b>.
+        </div>
+        <div class="muted small">Severe = among the worst 25% of past outages in customers affected or duration.
+          The marker on the bar shows the cut-off.</div>
+      </div>
+    {% else %}
+      <p class="muted">Choose a state, check the five inputs and press <b>Predict</b>.</p>
+    {% endif %}
+
+    <details>
+      <summary>How good is the model?</summary>
+      <ul class="small">
+        <li>Customers affected: {{ metrics.customers_reg.model }}, test R² {{ "%.2f"|format(metrics.customers_reg.test_r2) }} on 2022–2023 (cross-validation {{ "%.2f"|format(metrics.customers_reg.cv_r2) }}).</li>
+        <li>Duration: {{ metrics.duration_reg.model }}, test R² {{ "%.2f"|format(metrics.duration_reg.test_r2) }}. Treat the duration as a rough estimate.</li>
+        <li>Severe: {{ metrics.is_severe.model }} regression, test ROC-AUC {{ "%.2f"|format(metrics.is_severe.test_roc_auc) }}; probabilities are calibrated to the recent share of severe outages.</li>
+        <li>Trained on outages before 2022 using only information available at the outage start. The model is weakest for non-weather events (e.g. attacks), which it tends to over-predict.</li>
+      </ul>
+    </details>
+  </section>
+</main>
+
+<footer class="wrap muted small">Final project · Early severity prediction of major power outages · Data: Purdue / DOE OE-417, NOAA Storm Events, NWS warnings (IEM), EIA, BEA, Census.</footer>
+
+<script id="prefill" type="application/json">{{ prefill|tojson }}</script>
+<script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
