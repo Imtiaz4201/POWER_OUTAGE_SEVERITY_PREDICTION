@@ -1,0 +1,346 @@
+task,rank,feature,group,importance
+customers_reg,1,hist_state_storm_cust,outage history,0.1233860309259936
+customers_reg,2,area_hist_log_cust,area history,0.04043411054225922
+customers_reg,3,hist_state_cust_3y,outage history,0.03135434706232548
+customers_reg,4,com_customers,economy / population / land,0.030047945993941973
+customers_reg,5,nws_watch_active,NWS warnings,0.028524958402387317
+customers_reg,6,noaa_n_zones,NOAA storms,0.025630056880342488
+customers_reg,7,area_hist_n,area history,0.023625320654952608
+customers_reg,8,total_realgsp,economy / population / land,0.023072440014210174
+customers_reg,9,hours_since_last_storm,NOAA storms,0.023044690282704252
+customers_reg,10,nws_hours_since_warning,NWS warnings,0.02304385277749611
+customers_reg,11,noaa_storm_count,NOAA storms,0.01967220307536961
+customers_reg,12,res_sales,economy / population / land,0.01930407762503557
+customers_reg,13,hist_state_cust,outage history,0.01842626156631956
+customers_reg,14,total_customers,economy / population / land,0.017508484439790424
+customers_reg,15,nws_warn_active,NWS warnings,0.01708389944087415
+customers_reg,16,res_customers,economy / population / land,0.016373948763745257
+customers_reg,17,hist_state_storm_dur,outage history,0.016338119369786644
+customers_reg,18,noaa_count_7d,NOAA storms,0.015624750363339789
+customers_reg,19,area_hist_log_dur,area history,0.015145657300278993
+customers_reg,20,hist_storm_dur,outage history,0.01460505922591458
+customers_reg,21,com_sales,economy / population / land,0.014600902968791544
+customers_reg,22,hist_state_dur_3y,outage history,0.01333318375654236
+customers_reg,23,hist_storm_cust,outage history,0.012737366171746613
+customers_reg,24,pi_util_ofusa,economy / population / land,0.011903762473348779
+customers_reg,25,util_realgsp,economy / population / land,0.011842372170335324
+customers_reg,26,hist_state_zero_rate,outage history,0.011021269166974485
+customers_reg,27,area_hist_attack_share,area history,0.010721387958208007
+customers_reg,28,nws_adv_active,NWS warnings,0.010674049768336184
+customers_reg,29,noaa_n_ongoing,NOAA storms,0.009548269116902989
+customers_reg,30,area_hist_n_365d,area history,0.00954393337320753
+customers_reg,31,hist_global_cust_365d,outage history,0.009539155186527454
+customers_reg,32,ind_sales,economy / population / land,0.009485343684569937
+customers_reg,33,noaa_dominant_event_type,region / state / storm type,0.009431851203379145
+customers_reg,34,nws_warn_7d,NWS warnings,0.009068493812467248
+customers_reg,35,population,economy / population / land,0.009040235613154948
+customers_reg,36,total_sales,economy / population / land,0.008843120792851994
+customers_reg,37,noaa_max_hail_in,NOAA storms,0.008792210226735505
+customers_reg,38,nws_warn_24h,NWS warnings,0.008513082765151133
+customers_reg,39,hist_state_n_365d,outage history,0.008329709387836424
+customers_reg,40,hist_state_dur,outage history,0.008193953631157273
+customers_reg,41,anomaly_level,economy / population / land,0.007572547413368234
+customers_reg,42,hist_global_n_365d,outage history,0.0075525879250688795
+customers_reg,43,areapct_urban,economy / population / land,0.007545674273832209
+customers_reg,44,start_hour,time,0.00706652871611084
+customers_reg,45,ind_customers,economy / population / land,0.007053246151732566
+customers_reg,46,hist_state_n,outage history,0.007047586289044504
+customers_reg,47,hour_cos,time,0.006974819973442353
+customers_reg,48,ind_cust_pct,economy / population / land,0.006842976947015499
+customers_reg,49,pc_realgsp_change,economy / population / land,0.006717503958709577
+customers_reg,50,hist_global_dur_365d,outage history,0.006585709219114584
+customers_reg,51,res_percen,economy / population / land,0.006521400622529636
+customers_reg,52,clean_state,region / state / storm type,0.005941193846851737
+customers_reg,53,popden_uc,economy / population / land,0.005907075857818397
+customers_reg,54,res_price,economy / population / land,0.005822541338918029
+customers_reg,55,hour_sin,time,0.0057170247052733564
+customers_reg,56,com_price,economy / population / land,0.005660589960408663
+customers_reg,57,pc_realgsp_state,economy / population / land,0.005653517236474303
+customers_reg,58,poppct_uc,economy / population / land,0.005283531701014578
+customers_reg,59,total_price,economy / population / land,0.00526037960427151
+customers_reg,60,util_contri,economy / population / land,0.005249614898523787
+customers_reg,61,areapct_uc,economy / population / land,0.005059066824257943
+customers_reg,62,hist_global_dur,outage history,0.0050130230515504645
+customers_reg,63,start_month,time,0.004687460851403255
+customers_reg,64,ind_percen,economy / population / land,0.004526866663635252
+customers_reg,65,res_cust_pct,economy / population / land,0.004515737160845112
+customers_reg,66,popden_rural,economy / population / land,0.0043957680487629845
+customers_reg,67,hist_global_cust,outage history,0.004296426229122603
+customers_reg,68,pc_realgsp_rel,economy / population / land,0.004288660693652078
+customers_reg,69,month_cos,time,0.0042099372266389545
+customers_reg,70,noaa_cnt_wind,NOAA storms,0.004126804251975428
+customers_reg,71,com_cust_pct,economy / population / land,0.0040528543303960125
+customers_reg,72,ind_price,economy / population / land,0.00393917101837871
+customers_reg,73,noaa_max_wind_kt,NOAA storms,0.003920324571744956
+customers_reg,74,com_percen,economy / population / land,0.003861303759217923
+customers_reg,75,pct_water_inland,economy / population / land,0.0036085986175431973
+customers_reg,76,noaa_n_types,NOAA storms,0.003446216669136663
+customers_reg,77,hist_state_n_30d,outage history,0.0034450837825827237
+customers_reg,78,popden_urban,economy / population / land,0.0034407781787793223
+customers_reg,79,noaa_cnt_hail,NOAA storms,0.0033932287739536706
+customers_reg,80,month_sin,time,0.002983626246158816
+customers_reg,81,climate_region,region / state / storm type,0.00257371086158036
+customers_reg,82,pct_water_tot,economy / population / land,0.0025717352441789252
+customers_reg,83,pc_realgsp_usa,economy / population / land,0.002406128192940453
+customers_reg,84,pct_land,economy / population / land,0.0023972252797392923
+customers_reg,85,poppct_urban,economy / population / land,0.0022802406417293366
+customers_reg,86,nws_warn_active_wind,NWS warnings,0.0020849796995842857
+customers_reg,87,nws_warn_active_flood,NWS warnings,0.0020817661798156646
+customers_reg,88,nws_warn_active_tropical,NWS warnings,0.0020718550230054895
+customers_reg,89,noaa_cnt_fire,NOAA storms,0.0020570398803844234
+customers_reg,90,climate_category,region / state / storm type,0.002049642927033213
+customers_reg,91,noaa_cnt_tropical,NOAA storms,0.0020015316592377564
+customers_reg,92,is_weekend,time,0.001954363281519064
+customers_reg,93,n_states_affected,area history,0.0018316940028661936
+customers_reg,94,nerc_region,region / state / storm type,0.0015794110815676035
+customers_reg,95,noaa_cnt_flood,NOAA storms,0.0015614070143915438
+customers_reg,96,noaa_cnt_winter,NOAA storms,0.0014691678249753506
+customers_reg,97,noaa_has_storm,NOAA storms,0.00107151839900314
+customers_reg,98,nws_warn_active_heat,NWS warnings,0.0010679458759403652
+customers_reg,99,nws_warn_active_fire,NWS warnings,0.000997616513891445
+customers_reg,100,noaa_cnt_tornado,NOAA storms,0.0009720987236485932
+customers_reg,101,noaa_ongoing_wind,NOAA storms,0.0008599510273216141
+customers_reg,102,noaa_cnt_heat,NOAA storms,0.0008581340311950061
+customers_reg,103,noaa_ongoing_tropical,NOAA storms,0.0007264482064393356
+customers_reg,104,noaa_has_ongoing_storm,NOAA storms,0.0007072254607051349
+customers_reg,105,nws_warn_active_winter,NWS warnings,0.0006016456364766734
+customers_reg,106,noaa_cnt_cold,NOAA storms,0.0005505282163343079
+customers_reg,107,noaa_ongoing_winter,NOAA storms,0.0005101074742011906
+customers_reg,108,noaa_ongoing_flood,NOAA storms,0.00036427349541862255
+customers_reg,109,noaa_cnt_other,NOAA storms,0.00032934623244143676
+customers_reg,110,nws_warn_active_tornado,NWS warnings,0.00032728902187944214
+customers_reg,111,noaa_cnt_lightning,NOAA storms,0.000256240854895631
+customers_reg,112,nws_warn_active_cold,NWS warnings,0.00016819204804334082
+customers_reg,113,post_regime,time,3.8022335255217606e-05
+customers_reg,114,nws_warn_active_other,NWS warnings,2.466212780848139e-05
+customers_reg,115,regime_2024,time,0.0
+duration_reg,1,noaa_n_zones,NOAA storms,0.06414125067179753
+duration_reg,2,nws_watch_active,NWS warnings,0.046536693395206705
+duration_reg,3,noaa_storm_count,NOAA storms,0.0431376036684879
+duration_reg,4,nws_hours_since_warning,NWS warnings,0.04247935295820569
+duration_reg,5,hist_state_storm_dur,outage history,0.039608989149434164
+duration_reg,6,hist_state_dur_3y,outage history,0.03039231243380882
+duration_reg,7,area_hist_log_dur,area history,0.02547971796811099
+duration_reg,8,area_hist_attack_share,area history,0.024336835315676097
+duration_reg,9,hist_state_zero_rate,outage history,0.022888053886034345
+duration_reg,10,hist_storm_cust,outage history,0.019331281516331154
+duration_reg,11,hist_state_dur,outage history,0.018042776959045423
+duration_reg,12,hist_storm_dur,outage history,0.01732088194208663
+duration_reg,13,hist_global_n_365d,outage history,0.0165208721894005
+duration_reg,14,area_hist_log_cust,area history,0.01587101401104909
+duration_reg,15,hist_global_cust_365d,outage history,0.01544497601429818
+duration_reg,16,hour_cos,time,0.015283481726424124
+duration_reg,17,hist_global_dur_365d,outage history,0.015180255108816366
+duration_reg,18,hist_state_storm_cust,outage history,0.014841099636589883
+duration_reg,19,noaa_n_ongoing,NOAA storms,0.014698002030277468
+duration_reg,20,hist_state_cust_3y,outage history,0.014502653107242709
+duration_reg,21,start_hour,time,0.014254407584507198
+duration_reg,22,nws_warn_24h,NWS warnings,0.013413703780245366
+duration_reg,23,anomaly_level,economy / population / land,0.013362390869680149
+duration_reg,24,area_hist_n,area history,0.012642442808009576
+duration_reg,25,nws_warn_7d,NWS warnings,0.012633815308545149
+duration_reg,26,noaa_count_7d,NOAA storms,0.012363275689073515
+duration_reg,27,nws_warn_active,NWS warnings,0.011843811266284622
+duration_reg,28,hist_global_dur,outage history,0.011670676377214398
+duration_reg,29,hours_since_last_storm,NOAA storms,0.010570276583965798
+duration_reg,30,res_percen,economy / population / land,0.010374349534137694
+duration_reg,31,hist_global_cust,outage history,0.010341072267445727
+duration_reg,32,hist_state_n_365d,outage history,0.010277613136493682
+duration_reg,33,hour_sin,time,0.00995587018308226
+duration_reg,34,ind_cust_pct,economy / population / land,0.009819639502480064
+duration_reg,35,hist_state_cust,outage history,0.0093952557656111
+duration_reg,36,start_month,time,0.008942643380163501
+duration_reg,37,nws_adv_active,NWS warnings,0.008841291744136384
+duration_reg,38,ind_percen,economy / population / land,0.008555142479727454
+duration_reg,39,pc_realgsp_change,economy / population / land,0.008543040747424645
+duration_reg,40,hist_state_n,outage history,0.008500724680401413
+duration_reg,41,util_contri,economy / population / land,0.008220550943564074
+duration_reg,42,month_cos,time,0.008050110545585043
+duration_reg,43,com_cust_pct,economy / population / land,0.007754174536484166
+duration_reg,44,com_price,economy / population / land,0.007722682705204402
+duration_reg,45,noaa_n_types,NOAA storms,0.007344070374310132
+duration_reg,46,ind_price,economy / population / land,0.007286529659799763
+duration_reg,47,hist_state_n_30d,outage history,0.007258479869791862
+duration_reg,48,com_percen,economy / population / land,0.006816806922848035
+duration_reg,49,total_price,economy / population / land,0.006773553762508196
+duration_reg,50,res_cust_pct,economy / population / land,0.0067387946864878555
+duration_reg,51,area_hist_n_365d,area history,0.006738531250400547
+duration_reg,52,month_sin,time,0.006604518726684988
+duration_reg,53,ind_customers,economy / population / land,0.006270494807938983
+duration_reg,54,res_price,economy / population / land,0.006203777033980798
+duration_reg,55,pc_realgsp_rel,economy / population / land,0.006187926556644042
+duration_reg,56,nws_warn_active_wind,NWS warnings,0.006065800374399519
+duration_reg,57,pc_realgsp_state,economy / population / land,0.005917227594713253
+duration_reg,58,noaa_cnt_wind,NOAA storms,0.005412137082088229
+duration_reg,59,nws_warn_active_flood,NWS warnings,0.0053610920908992174
+duration_reg,60,noaa_dominant_event_type,region / state / storm type,0.005327283999771899
+duration_reg,61,ind_sales,economy / population / land,0.0050611740487715535
+duration_reg,62,popden_rural,economy / population / land,0.004645828858116334
+duration_reg,63,pi_util_ofusa,economy / population / land,0.004630642254377664
+duration_reg,64,res_sales,economy / population / land,0.004612461841008974
+duration_reg,65,com_sales,economy / population / land,0.004376048266928678
+duration_reg,66,noaa_ongoing_wind,NOAA storms,0.00419719733167149
+duration_reg,67,com_customers,economy / population / land,0.0041677745810475815
+duration_reg,68,popden_uc,economy / population / land,0.00415149128890851
+duration_reg,69,clean_state,region / state / storm type,0.004009443504954593
+duration_reg,70,pct_water_inland,economy / population / land,0.003989124202756265
+duration_reg,71,noaa_max_wind_kt,NOAA storms,0.003958720776046281
+duration_reg,72,noaa_cnt_winter,NOAA storms,0.0039030898814176778
+duration_reg,73,noaa_ongoing_tropical,NOAA storms,0.0037565938574671944
+duration_reg,74,areapct_uc,economy / population / land,0.003717648991086918
+duration_reg,75,total_realgsp,economy / population / land,0.0037076594896889702
+duration_reg,76,total_sales,economy / population / land,0.0036527150193214285
+duration_reg,77,util_realgsp,economy / population / land,0.003638565376746182
+duration_reg,78,climate_category,region / state / storm type,0.0033119154853466313
+duration_reg,79,noaa_cnt_flood,NOAA storms,0.0032978602908544786
+duration_reg,80,pct_land,economy / population / land,0.0032148795153196996
+duration_reg,81,pc_realgsp_usa,economy / population / land,0.003179833714367082
+duration_reg,82,poppct_uc,economy / population / land,0.0030484307716465197
+duration_reg,83,res_customers,economy / population / land,0.002971516511484033
+duration_reg,84,popden_urban,economy / population / land,0.0029436373394164843
+duration_reg,85,total_customers,economy / population / land,0.002942742234916279
+duration_reg,86,population,economy / population / land,0.002780214800662207
+duration_reg,87,nerc_region,region / state / storm type,0.0026500270873591526
+duration_reg,88,areapct_urban,economy / population / land,0.002585560511371703
+duration_reg,89,pct_water_tot,economy / population / land,0.002558016241488217
+duration_reg,90,poppct_urban,economy / population / land,0.002079123527393618
+duration_reg,91,noaa_cnt_heat,NOAA storms,0.002074625265111195
+duration_reg,92,climate_region,region / state / storm type,0.001778193541335778
+duration_reg,93,nws_warn_active_fire,NWS warnings,0.0017349104892542418
+duration_reg,94,noaa_cnt_tropical,NOAA storms,0.0016834829373989454
+duration_reg,95,is_weekend,time,0.0016523692480498908
+duration_reg,96,noaa_cnt_other,NOAA storms,0.0014957752823547958
+duration_reg,97,noaa_cnt_fire,NOAA storms,0.0014549565217178752
+duration_reg,98,noaa_cnt_cold,NOAA storms,0.0013722956604573578
+duration_reg,99,n_states_affected,area history,0.001304954358210608
+duration_reg,100,nws_warn_active_winter,NWS warnings,0.001290473266482404
+duration_reg,101,noaa_cnt_tornado,NOAA storms,0.0012627571596652142
+duration_reg,102,noaa_cnt_hail,NOAA storms,0.0011056874100550465
+duration_reg,103,nws_warn_active_tropical,NWS warnings,0.0011005348016313145
+duration_reg,104,noaa_max_hail_in,NOAA storms,0.0010342769875954512
+duration_reg,105,noaa_has_storm,NOAA storms,0.0009560487126294015
+duration_reg,106,noaa_ongoing_winter,NOAA storms,0.0008504126635198691
+duration_reg,107,noaa_ongoing_flood,NOAA storms,0.0008055736899580835
+duration_reg,108,nws_warn_active_cold,NWS warnings,0.0007794267050079712
+duration_reg,109,noaa_has_ongoing_storm,NOAA storms,0.0006754628707847679
+duration_reg,110,nws_warn_active_heat,NWS warnings,0.0006683875801477846
+duration_reg,111,post_regime,time,0.0003376818503875081
+duration_reg,112,nws_warn_active_tornado,NWS warnings,0.0002539968316991328
+duration_reg,113,noaa_cnt_lightning,NOAA storms,0.0001649920110013899
+duration_reg,114,nws_warn_active_other,NWS warnings,2.869565254307733e-05
+duration_reg,115,regime_2024,time,0.0
+is_severe,1,hist_state_storm_cust,outage history,0.03836202074071036
+is_severe,2,nws_watch_active,NWS warnings,0.03647034025013846
+is_severe,3,area_hist_log_dur,area history,0.026356974628264817
+is_severe,4,nws_hours_since_warning,NWS warnings,0.025517355115352528
+is_severe,5,noaa_n_ongoing,NOAA storms,0.024446794191472714
+is_severe,6,hours_since_last_storm,NOAA storms,0.023712983297805953
+is_severe,7,area_hist_log_cust,area history,0.0214049504325602
+is_severe,8,noaa_n_zones,NOAA storms,0.02113127589140586
+is_severe,9,hist_state_dur,outage history,0.02073413956658077
+is_severe,10,nws_warn_active,NWS warnings,0.020562175841402186
+is_severe,11,hist_state_cust,outage history,0.01831994018001079
+is_severe,12,noaa_count_7d,NOAA storms,0.017522453929872343
+is_severe,13,hist_state_dur_3y,outage history,0.01736247926400104
+is_severe,14,noaa_storm_count,NOAA storms,0.017188220438304768
+is_severe,15,hist_global_dur,outage history,0.016112828183130215
+is_severe,16,hist_global_cust,outage history,0.015507750028049697
+is_severe,17,res_sales,economy / population / land,0.01549947358814966
+is_severe,18,anomaly_level,economy / population / land,0.015430490460352289
+is_severe,19,hist_global_cust_365d,outage history,0.015276701730978486
+is_severe,20,hist_global_n_365d,outage history,0.015205870965837386
+is_severe,21,hist_storm_cust,outage history,0.015068167172689962
+is_severe,22,hist_storm_dur,outage history,0.01490493351560372
+is_severe,23,hist_global_dur_365d,outage history,0.01465956211004728
+is_severe,24,hist_state_cust_3y,outage history,0.01427765893841651
+is_severe,25,total_sales,economy / population / land,0.013524539993123
+is_severe,26,hist_state_storm_dur,outage history,0.0131214600411418
+is_severe,27,area_hist_attack_share,area history,0.013000573185188
+is_severe,28,nws_warn_24h,NWS warnings,0.012146229117351578
+is_severe,29,hist_state_n,outage history,0.011925427352267317
+is_severe,30,hist_state_zero_rate,outage history,0.011533364349379996
+is_severe,31,area_hist_n,area history,0.01152077665397003
+is_severe,32,noaa_max_wind_kt,NOAA storms,0.011358945815221656
+is_severe,33,ind_customers,economy / population / land,0.011304126716401212
+is_severe,34,res_percen,economy / population / land,0.011236816937889638
+is_severe,35,ind_sales,economy / population / land,0.010720754530066951
+is_severe,36,nws_warn_7d,NWS warnings,0.010545878195024864
+is_severe,37,pi_util_ofusa,economy / population / land,0.010488037850573426
+is_severe,38,util_realgsp,economy / population / land,0.010333916586798685
+is_severe,39,start_hour,time,0.010322978432166837
+is_severe,40,pc_realgsp_change,economy / population / land,0.010294883651987575
+is_severe,41,hour_sin,time,0.010071389058869118
+is_severe,42,noaa_cnt_wind,NOAA storms,0.009607927345205058
+is_severe,43,hour_cos,time,0.009436604248056209
+is_severe,44,hist_state_n_365d,outage history,0.009181939535141036
+is_severe,45,com_price,economy / population / land,0.009144247898160663
+is_severe,46,start_month,time,0.00913441498655601
+is_severe,47,area_hist_n_365d,area history,0.00887278935887218
+is_severe,48,nws_adv_active,NWS warnings,0.008572848497081505
+is_severe,49,noaa_cnt_tropical,NOAA storms,0.008531922130993155
+is_severe,50,month_cos,time,0.00756562465378866
+is_severe,51,com_percen,economy / population / land,0.0075182481122234735
+is_severe,52,res_price,economy / population / land,0.007479990216846965
+is_severe,53,noaa_ongoing_tropical,NOAA storms,0.007253032056828632
+is_severe,54,noaa_cnt_winter,NOAA storms,0.007175924720507809
+is_severe,55,noaa_dominant_event_type,region / state / storm type,0.007173431266442888
+is_severe,56,total_realgsp,economy / population / land,0.0071270649207715794
+is_severe,57,com_customers,economy / population / land,0.007061473822433013
+is_severe,58,ind_cust_pct,economy / population / land,0.006642797825302692
+is_severe,59,pc_realgsp_usa,economy / population / land,0.0065481387951725435
+is_severe,60,total_price,economy / population / land,0.006462451491435307
+is_severe,61,res_cust_pct,economy / population / land,0.006402169571675004
+is_severe,62,com_cust_pct,economy / population / land,0.006225041420578521
+is_severe,63,total_customers,economy / population / land,0.00617448112042662
+is_severe,64,util_contri,economy / population / land,0.006005362543162657
+is_severe,65,ind_price,economy / population / land,0.005838818038569788
+is_severe,66,month_sin,time,0.005596643784118447
+is_severe,67,ind_percen,economy / population / land,0.0054925347126721985
+is_severe,68,pc_realgsp_rel,economy / population / land,0.005481375566465699
+is_severe,69,res_customers,economy / population / land,0.005416688303536771
+is_severe,70,nws_warn_active_flood,NWS warnings,0.005268374733418055
+is_severe,71,noaa_cnt_flood,NOAA storms,0.005207626490182937
+is_severe,72,nws_warn_active_wind,NWS warnings,0.0051751408241019975
+is_severe,73,pc_realgsp_state,economy / population / land,0.005171347874964327
+is_severe,74,population,economy / population / land,0.005151938390703099
+is_severe,75,com_sales,economy / population / land,0.005130276964649246
+is_severe,76,popden_uc,economy / population / land,0.005082180102001692
+is_severe,77,hist_state_n_30d,outage history,0.004835658159109688
+is_severe,78,nerc_region,region / state / storm type,0.004712389648767638
+is_severe,79,noaa_n_types,NOAA storms,0.004551098125740413
+is_severe,80,nws_warn_active_winter,NWS warnings,0.004110437869464362
+is_severe,81,noaa_max_hail_in,NOAA storms,0.003995919172926568
+is_severe,82,poppct_uc,economy / population / land,0.003564432738454434
+is_severe,83,pct_land,economy / population / land,0.003558582577412775
+is_severe,84,nws_warn_active_fire,NWS warnings,0.0035576796380727906
+is_severe,85,noaa_cnt_hail,NOAA storms,0.003201197437236143
+is_severe,86,climate_category,region / state / storm type,0.003199134359798553
+is_severe,87,pct_water_inland,economy / population / land,0.0030322591628750054
+is_severe,88,popden_rural,economy / population / land,0.0029480492549303866
+is_severe,89,nws_warn_active_tropical,NWS warnings,0.0028457193637972332
+is_severe,90,areapct_uc,economy / population / land,0.002777538579703893
+is_severe,91,noaa_cnt_heat,NOAA storms,0.0027345438010431696
+is_severe,92,noaa_cnt_fire,NOAA storms,0.002684695489435882
+is_severe,93,pct_water_tot,economy / population / land,0.0024750828554919164
+is_severe,94,climate_region,region / state / storm type,0.002389181170905579
+is_severe,95,areapct_urban,economy / population / land,0.002353148559630504
+is_severe,96,noaa_cnt_tornado,NOAA storms,0.0022765710481940237
+is_severe,97,noaa_has_ongoing_storm,NOAA storms,0.002178162614016006
+is_severe,98,clean_state,region / state / storm type,0.001930613893528158
+is_severe,99,popden_urban,economy / population / land,0.0019015041699548913
+is_severe,100,nws_warn_active_tornado,NWS warnings,0.0018419784450835735
+is_severe,101,poppct_urban,economy / population / land,0.0016016813728970097
+is_severe,102,n_states_affected,area history,0.0015606121000839078
+is_severe,103,noaa_ongoing_wind,NOAA storms,0.0013738915297438704
+is_severe,104,nws_warn_active_cold,NWS warnings,0.0013271446568865505
+is_severe,105,is_weekend,time,0.001106507856805875
+is_severe,106,noaa_ongoing_flood,NOAA storms,0.0010082365310886726
+is_severe,107,noaa_cnt_other,NOAA storms,0.000983108323781471
+is_severe,108,nws_warn_active_heat,NWS warnings,0.0009744726441476832
+is_severe,109,noaa_ongoing_winter,NOAA storms,0.0009713871307043461
+is_severe,110,noaa_cnt_lightning,NOAA storms,0.0006715859410450297
+is_severe,111,noaa_cnt_cold,NOAA storms,0.0006361400189176176
+is_severe,112,post_regime,time,0.0001515517079003245
+is_severe,113,noaa_has_storm,NOAA storms,9.620129847474978e-05
+is_severe,114,nws_warn_active_other,NWS warnings,8.538950034316645e-05
+is_severe,115,regime_2024,time,0.0

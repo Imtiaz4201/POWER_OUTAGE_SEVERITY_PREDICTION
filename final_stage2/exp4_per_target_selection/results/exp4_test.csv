@@ -1,0 +1,6 @@
+task,option,role,n_train,n_test,test_R2,test_MAE,test_rho,test_ROC_AUC,test_PR_AUC,threshold,test_F1,test_recall,test_precision,test_base_rate
+customers_reg,"1: all years, with history",default (Experiment 2),1466,195,0.4904197029558597,1.097042223059533,0.6971262798577177,,,,,,,
+customers_reg,"2: all years, without history",chosen by CV,1466,195,0.4604789143353669,1.106082526260446,0.7043064330827006,,,,,,,
+duration_reg,"1: all years, with history",chosen by CV,2613,558,0.11650321287478749,1.6914641381098237,0.35095924662945915,,,,,,,
+is_severe,"1: all years, with history",default (Experiment 2),1357,163,,,,0.7798066595059076,0.6840548449639958,0.41999999999999993,0.6194690265486725,0.7142857142857143,0.546875,0.3006134969325153
+is_severe,"2: all years, without history",chosen by CV,1357,163,,,,0.7738990332975295,0.6742613464530434,0.3,0.5531914893617021,0.7959183673469388,0.42391304347826086,0.3006134969325153

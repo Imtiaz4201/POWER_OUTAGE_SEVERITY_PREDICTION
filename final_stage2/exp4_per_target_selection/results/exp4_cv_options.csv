@@ -1,0 +1,13 @@
+task,option,n_features,cv_mean,cv_std,folds,chosen
+customers_reg,"1: all years, with history",115,0.30617359444309233,0.04351731945353211,"[0.357, 0.332, 0.294, 0.241]",False
+customers_reg,"2: all years, without history",98,0.3163924031861328,0.020094835448223693,"[0.338, 0.328, 0.285, 0.315]",True
+customers_reg,"3: 2006 onward, with history",115,0.2800339887481278,0.046683212768613126,"[0.268, 0.352, 0.278, 0.222]",False
+customers_reg,"4: 2006 onward, without history",98,0.31147223315033706,0.016794707747152915,"[0.307, 0.338, 0.291, 0.31]",False
+duration_reg,"1: all years, with history",115,0.1350073923967283,0.08398049913282249,"[-0.01, 0.195, 0.173, 0.182]",True
+duration_reg,"2: all years, without history",98,0.11624340730225802,0.10276478453712845,"[-0.06, 0.189, 0.152, 0.183]",False
+duration_reg,"3: 2006 onward, with history",115,0.12293672536393643,0.08328504434614718,"[-0.021, 0.161, 0.177, 0.174]",False
+duration_reg,"4: 2006 onward, without history",98,0.12023179726565489,0.10192277985440613,"[-0.053, 0.192, 0.147, 0.195]",False
+is_severe,"1: all years, with history",115,0.6821015970302593,0.06697307706063507,"[0.733, 0.764, 0.615, 0.617]",False
+is_severe,"2: all years, without history",98,0.686458575276581,0.059960593932352216,"[0.732, 0.759, 0.619, 0.636]",True
+is_severe,"3: 2006 onward, with history",115,0.6736727427869048,0.07175774981601134,"[0.713, 0.771, 0.608, 0.602]",False
+is_severe,"4: 2006 onward, without history",98,0.6846194932759949,0.06555943619784288,"[0.731, 0.767, 0.618, 0.623]",False

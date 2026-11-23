@@ -1,0 +1,8 @@
+,mean cost over c = 1..10,times lowest among usable strategies
+always not severe,1.653,0
+always severe,0.699,6
+a. F1 threshold (progress stage),0.65,8
+"b. cost-tuned, all training years (progress stage)",0.603,3
+"c. cost-tuned, recent years",0.602,1
+d. theoretical threshold 1/(1+c),0.591,1
+best possible on test (reference),0.539,0

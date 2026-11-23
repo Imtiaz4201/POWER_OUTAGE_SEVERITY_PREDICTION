@@ -1,0 +1,7 @@
+rule,scenario,task,2a test R² / ROC-AUC,2b test R² / ROC-AUC,2a model,2b model
+R2_strict,A_pre_event,customers_reg,0.4904197029558598,0.3979872499095782,RandomForest,RandomForest
+R2_strict,A_pre_event,duration_reg,0.1165032128747874,0.138949170150348,RandomForest,Ridge
+R2_strict,A_pre_event,is_severe,0.7798066595059076,0.7582159624413145,Logistic,XGBoost
+R2_strict,B_with_cause,customers_reg,0.6114496976981969,0.4810681751692185,Lasso,Lasso
+R2_strict,B_with_cause,duration_reg,0.2441623442425662,0.2700830373117976,Lasso,RandomForest
+R2_strict,B_with_cause,is_severe,0.8138202649480845,0.7710757297407635,Logistic,RandomForest

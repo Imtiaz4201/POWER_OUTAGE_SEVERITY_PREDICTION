@@ -1,0 +1,4 @@
+,outages,severe share
+all training years (2000-2021),1357,0.49963154016212236
+"recent training years (latest fold, 2019-2021)",271,0.39114391143911437
+test years (2022-2023),163,0.3006134969325153
