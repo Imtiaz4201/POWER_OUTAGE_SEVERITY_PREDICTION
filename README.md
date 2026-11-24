@@ -131,9 +131,9 @@ Windows (PowerShell):
 
 ```powershell
 cd C:\path\to\repo
-icacls ..\outage-key.pem /inheritance:r
-icacls ..\outage-key.pem /grant:r "$($env:USERNAME):(R)"
-scp -r -i ..\outage-key.pem .\app ec2-user@<your-public-DNS>:~/
+icacls .\outage-key.pem /inheritance:r
+icacls .\outage-key.pem /grant:r "$($env:USERNAME):(R)"
+scp -r -i .\outage-key.pem .\app ec2-user@<your-public-DNS>:~/
 ```
 
 If asked "Are you sure you want to continue connecting?", type `yes`. The upload (about 26 MB) takes under a minute.
