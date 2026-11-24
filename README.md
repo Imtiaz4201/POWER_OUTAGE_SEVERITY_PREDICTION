@@ -8,7 +8,7 @@ A small web app for our final project. At the moment a major power outage starts
 
 The user enters a **state**, the **outage start time** and the **top 5 features** (pre-filled with typical values for the state). The other model features (110 numeric + 5 categorical, 115 in total) are filled automatically. Time features come from the start time. The rest are the typical values (median, or most common category) of recent outages (2019–2023) in the same state with the same storm status.
 
-## Models (from `final_stage2`)
+## Models (from `final_stage`)
 
 | Target | Model (selected by CV in Experiment 2) | Test 2022–2023 |
 |---|---|---|
@@ -43,7 +43,7 @@ The user enters a **state**, the **outage start time** and the **top 5 features*
 │   ├── Procfile                         gunicorn command for Elastic Beanstalk
 │   └── Dockerfile                       for App Runner / ECS
 │
-├── final_stage2/                        final pipeline and experiments (source of the models)
+├── final_stage/                        final pipeline and experiments (source of the models)
 │   ├── build/                           final data build
 │   ├── exp1_walk_forward/               Experiment 1: walk-forward evaluation      (results/)
 │   ├── exp2_model_search/               Experiment 2: model search and CV          (results/)
@@ -53,7 +53,7 @@ The user enters a **state**, the **outage start time** and the **top 5 features*
 │   ├── exp6_error_diagnosis/            Experiment 6: error diagnosis              (results/)
 │   └── exp7_rq2_reliability/            Experiment 7: severe-class calibration     (results/)
 │
-└── progress_stage2/                     earlier progress work and report
+└── progress_stage/                     earlier progress work and report
     ├── report_stage2/                   report (figures/)
     ├── results_outage_extended_noaa_nws_newgrid/
     └── results_outage_old_noaa_hifld/
@@ -194,7 +194,7 @@ The models need the raw data in `po1/Data` and the `tf_cpu` environment. Run fro
 /opt/anaconda3/envs/tf_cpu/bin/python app/training/train_model.py
 ```
 
-This reruns the final-stage data pipeline (`final_stage2`) and refits the three models with the Experiment 2 settings. It then rewrites `app/models/*.pkl` and prints the test scores as a check.
+This reruns the final-stage data pipeline (`final_stage`) and refits the three models with the Experiment 2 settings. It then rewrites `app/models/*.pkl` and prints the test scores as a check.
 
 ## Limits
 
